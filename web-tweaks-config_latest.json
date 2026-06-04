@@ -1,0 +1,259 @@
+{
+  "extensionEnabled": true,
+  "tweaks": [
+    {
+      "category": "tweak",
+      "css": "/* -------  GENDER PAGE TINT ------- */\n\nhtml[data-wtm-gender=\"men\"] {\n  --wtm-page-bg: #e8f0ff;\n}\n\nhtml[data-wtm-gender=\"women\"] {\n  --wtm-page-bg: #fff0f7;\n}\n\nhtml[data-wtm-gender=\"unisex\"] {\n  --wtm-page-bg: #f4edff;\n}\n\n/* Broad page background areas */\nhtml[data-wtm-gender] body,\nhtml[data-wtm-gender] main,\nhtml[data-wtm-gender] section,\nhtml[data-wtm-gender] article,\nhtml[data-wtm-gender] fieldset,\nhtml[data-wtm-gender] [data-test*=\"-section\"],\nhtml[data-wtm-gender] [data-test*=\"-container\"] {\n  background-color: var(--wtm-page-bg) !important;\n}\n\n/* Common Storm/PIM card/summary wrappers */\nhtml[data-wtm-gender] .css-11q7adv,\nhtml[data-wtm-gender] .css-1gxaydl,\nhtml[data-wtm-gender] .css-1rzeait {\n  background-color: var(--wtm-page-bg) !important;\n}\n\n/* Keep editable fields white */\nhtml[data-wtm-gender] input,\nhtml[data-wtm-gender] select,\nhtml[data-wtm-gender] textarea,\nhtml[data-wtm-gender] [contenteditable=\"true\"],\nhtml[data-wtm-gender] [role=\"textbox\"],\nhtml[data-wtm-gender] [role=\"combobox\"],\nhtml[data-wtm-gender] [data-type=\"dropdown-search-input\"] {\n  background-color: #ffffff !important;\n  color: #333333 !important;\n}\n\n/* Keep dropdown/select-looking boxes white */\nhtml[data-wtm-gender] [class*=\"Dropdown-out\"],\nhtml[data-wtm-gender] [class*=\"Dropdown-placeholder\"],\nhtml[data-wtm-gender] [class*=\"css-8nevw7\"],\nhtml[data-wtm-gender] [class*=\"css-526klx\"] {\n  background-color: #ffffff !important;\n  color: #333333 !important;\n}\n\n/* Rich text / description editor */\nhtml[data-wtm-gender] .rdw-editor-main,\nhtml[data-wtm-gender] div.css-bcalnh.rdw-editor-main {\n  background-color: #ffffff !important;\n  color: #333333 !important;\n}\n\n/* Keep open dropdown menus / tree dropdowns white */\nhtml[data-wtm-gender] [role=\"listbox\"],\nhtml[data-wtm-gender] [role=\"menu\"],\nhtml[data-wtm-gender] [role=\"option\"],\nhtml[data-wtm-gender] [role=\"menuitem\"],\nhtml[data-wtm-gender] [data-type=\"DropdownAutoClose\"],\nhtml[data-wtm-gender] [data-type=\"list-item-root\"],\nhtml[data-wtm-gender] [data-name=\"listItemRoot\"] {\n  background-color: #ffffff !important;\n}\n\n/* Protect nested/tree dropdown spacing and wrappers */\nhtml[data-wtm-gender] [role=\"listbox\"] ul,\nhtml[data-wtm-gender] [role=\"listbox\"] li,\nhtml[data-wtm-gender] [role=\"menu\"] li,\nhtml[data-wtm-gender] [data-type=\"DropdownAutoClose\"] section,\nhtml[data-wtm-gender] [data-type=\"DropdownAutoClose\"] div {\n  background-color: #ffffff !important;\n}\n\n/* Keep highlighted/focused dropdown rows readable */\nhtml[data-wtm-gender] [role=\"option\"][aria-selected=\"true\"],\nhtml[data-wtm-gender] [role=\"option\"].focused,\nhtml[data-wtm-gender] [data-type=\"list-item-root\"].focused {\n  background-color: #f5f6fa !important;\n}\n\n/* Fix Web Category tree submenu background gaps */\nhtml[data-wtm-gender] #product-data-web-category-listbox section.css-0 {\n  background-color: #ffffff !important;\n}\n\n/* Web category closed dropdown / tree input - balanced */\nhtml[data-wtm-gender] #product-data-web-category,\nhtml[data-wtm-gender] #product-data-web-category > div,\nhtml[data-wtm-gender] #product-data-web-category > div > div,\nhtml[data-wtm-gender] #product-data-web-category .css-dpvq12,\nhtml[data-wtm-gender] #product-data-web-category .css-1j5d3ll,\nhtml[data-wtm-gender] input[data-test=\"edit-core-product-details-form-web-category-tree-input\"],\nhtml[data-wtm-gender] #product-data-web-category-input {\n  background-color: #ffffff !important;\n  color: #333333 !important;\n}\n\n/* Keep icons/arrows transparent */\nhtml[data-wtm-gender] #product-data-web-category i,\nhtml[data-wtm-gender] #product-data-web-category svg,\nhtml[data-wtm-gender] #product-data-web-category svg *,\nhtml[data-wtm-gender] #product-data-web-category path {\n  background-color: transparent !important;\n}",
+      "enabled": true,
+      "id": "gender-background",
+      "info": "Makes the whole PIM page background color change based on gender:\nUnisex = Purple\nMen = Blue\nWomen = Pink\nDoes not work for Kids, in this case it's the default white.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Gender Colors -  Background"
+    },
+    {
+      "category": "hide",
+      "css": "",
+      "enabled": true,
+      "id": "colors-hide-do-not-use",
+      "info": "Hides all colours that have \"DO NOT USE\" text in the colour dropdowns to make the list more compact and avoid mistakes.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Colors - Do Not Use"
+    },
+    {
+      "category": "tweak",
+      "css": ".css-1galelb {\n  grid-template-columns: 34rem calc(100% - 34rem) !important;\n}\n.css-1o31tb4 {\n  width: 34rem !important;\n}\n.css-1galelb {\n  grid-template-columns: 36rem minmax(0, 1fr) !important;\n}",
+      "enabled": true,
+      "id": "sum-box-wider",
+      "info": "Makes the sum box slightly wider for better text visibility, mostly for pre-owned or whenever theres a lot of text.\n⚠️ Does not work well with the new dual sum-box. Fix this!",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Sum Box - Wider"
+    },
+    {
+      "category": "hide",
+      "css": "fieldset[data-test=\"edit-measurements-form-section\"] > div > div:has(> div [role=\"combobox\"]) {\n  display: none !important;\n}",
+      "enabled": true,
+      "id": "Fitting-phrase-hide",
+      "info": "Hides the Fitting phrase dropdown that appears 4 times:\n1# Fitting phrase\n2# Fitting phrase\netc..",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Fitting phrase"
+    },
+    {
+      "category": "hide",
+      "css": "fieldset[data-test=\"edit-measurements-form-section\"] > div > div:has(> label [data-reach-tooltip-trigger]):has(> .rdw-editor-wrapper) {\n  display: none !important;\n}\n",
+      "enabled": true,
+      "id": "fitting-details-hide",
+      "info": "",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Fitting details"
+    },
+    {
+      "category": "tweak",
+      "css": ".css-4g18f0 {\n    max-height: 450px;\n}\n",
+      "enabled": true,
+      "id": "bigger-dropdowns",
+      "info": "Makes dropdowns bigger (taller/height) to show more items and select things faster, avoiding scrolling.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Bigger dropdowns"
+    },
+    {
+      "category": "hide",
+      "css": ".css-1m8d84d {\ndisplay: none;\n}",
+      "enabled": true,
+      "id": "hide-info-icons",
+      "info": "Hides info icons all over the PIM page, once you know their info they're no longer needed. This helps to declutter the page.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Info icons"
+    },
+    {
+      "category": "hide",
+      "css": "/* core required notes */\nfieldset[data-test=\"edit-core-product-details-form-section\"] > div:has(> p > b):not(:has(label)) {\n  display: none !important;\n}\n\n/* shipping required note */\nfieldset[data-test=\"edit-shipping-product-details-form-section\"] > div:has(> div > span:nth-of-type(3)):not(:has(label)):not(:has(input)):not(:has([role=\"combobox\"])) {\n  display: none !important;\n}\n\n/* shipping required note */\nfieldset[data-test=\"edit-shipping-product-details-form-section\"] > div:last-of-type {\n  display: none !important;\n}\n\n/* description required note */\nfieldset[data-test=\"edit-highlights-form-section\"] > div:has(> label[data-test=\"edit-highlights-form-description-label\"]) + div {\n  display: none !important;\n}",
+      "enabled": true,
+      "id": "hide-required-notes",
+      "info": "Hides text like:\n** Required for production: Item can't be added to a slot without this information\n* Required: changes cannot be submitted without this information\nJust assume everything with * is required; there is no need to have this text cluttering the web page.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "*Required"
+    },
+    {
+      "category": "hide",
+      "css": "/* shipping box */\nfieldset[data-test=\"edit-shipping-product-details-form-section\"] > div:has(> #edit-shipping-product-details-form-shipping-box) {\n  display: none !important;\n}",
+      "enabled": true,
+      "id": "hide-shipping-box",
+      "info": "",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Shipping box"
+    },
+    {
+      "category": "hide",
+      "css": "/* shipping constraints - This gets rid of all measurements, needs to be more granular */\nfieldset[data-test=\"edit-shipping-product-details-form-section\"] > div:has(input[id^=\"edit-shipping-product-details-form-shipping-constraints-\"]) {\n  display: none !important;\n}",
+      "enabled": true,
+      "id": "hide-shipping-constraints",
+      "info": "",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Shipping constraints"
+    },
+    {
+      "category": "hide",
+      "css": "/* what fits in the bag */\nfieldset[data-test=\"edit-measurements-form-section\"] > div:has(> label[data-test=\"edit-measurements-form-summary-description-label\"]) {\n  display: none !important;\n}",
+      "enabled": true,
+      "id": "hide-fit-bag",
+      "info": "",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "What Fits in the bag"
+    },
+    {
+      "category": "hide",
+      "css": "/* shooting: length unit */\nfieldset[data-test=\"edit-shooting-product-details-form-section\"] > div:has(> label[data-test=\"edit-shooting-product-details-form-measure-unit-length\"]) {\n  display: none !important;\n}",
+      "enabled": true,
+      "id": "hide-shooting-length-measure-unit",
+      "info": "",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Shooting: length unit"
+    },
+    {
+      "category": "hide",
+      "css": "/* shooting: model info */\nfieldset[data-test=\"edit-shooting-product-details-form-section\"] > div:has(> label[for=\"edit-shooting-product-details-form-model-measurements-table\"]) {\n  display: none !important;\n}\n",
+      "enabled": true,
+      "id": "hide-shooting-model-info",
+      "info": "",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Shooting: model info"
+    },
+    {
+      "category": "hide",
+      "css": "/* shooting: outfit products */\nfieldset[data-test=\"edit-shooting-product-details-form-section\"] > div:has(> form[data-test=\"search-outfit\"]) {\n  display: none !important;\n}",
+      "enabled": true,
+      "id": "hide-shooting-outfit-products",
+      "info": "",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Shooting: outfit products"
+    },
+    {
+      "category": "hide",
+      "css": "/* Hide Product Property fields */\n\n/* GNS-compliant composition\n.css-btem34:has(#product-property-item-a02917bc-59f1-4c83-b2a0-d1d1ca00f870),\n*/\n\n.css-btem34:has(#product-property-item-63d8ec26-8785-4cd0-b1e7-7dcdd630df59),\n\n.css-btem34:has(#product-property-item-c6594b91-113b-46e5-ba19-88f62029a490),\n\n.css-btem34:has(#product-property-item-10b7736d-2218-4986-a87e-73fba3b1fa06),\n\n.css-btem34:has(#product-property-item-e5cbfa32-917a-4d08-a76e-f3a2a34bd19a),\n\n.css-btem34:has(#product-property-item-7c358b34-d34d-4aac-9f57-d38af67b78a2),\n\n.css-btem34:has(#product-property-item-bed8a6f2-ff10-473c-ac94-a8cd618b3d3a),\n\n/* Luxclusif Assets Origin */\n.css-btem34:has(#product-property-item-f9eaeecc-0839-4b73-ae34-09d910e1f6e3),\n\n.css-btem34:has(#product-property-item-6c975927-8922-4416-a00f-91f1b6fef3d4) {\n  display: none !important;\n}\n\n/* additional details: partner product material */\nfieldset[data-test=\"edit-additional-product-details-form-section\"] > div:nth-of-type(2) {\n  display: none !important;\n}",
+      "enabled": true,
+      "id": "hide-additional-details",
+      "info": "Hides all unnecessary 'Additional Details' at the bottom of PIM + the big \"Partner product material\" at the bottom.\n\nKEEPS:\n- Item found Online\n- GNS-compliant\n- [FF USE ONLY] Culturally Offensive Content\n\nHIDES:\n- Luxclusif Assets Origin\n- Fashion Concierge\n- USPS Postal Network Scope\n- PCEX ID\n- Obsolete reasons\n- Temporary de-publications\n- Knitted fabric\n- partner product material",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Additional Details"
+    },
+    {
+      "category": "hide",
+      "css": "/* Hide section titles only */\nlegend[data-test=\"edit-core-product-details-form-title\"],\nlegend[data-test=\"edit-brand-product-details-form-title\"],\nlegend[data-test=\"edit-material-and-care-form-title\"],\nlegend[data-test=\"edit-measurements-and-fitting-form-title\"],\nlegend[data-test=\"edit-measurements-form-title\"],\nlegend[data-test=\"edit-highlights-form-title\"],\nlegend[data-test=\"edit-additional-product-details-form-title\"]\n{\n  display: none !important;\n}\n\n/* Hide h3 section titles */\nh3[data-test=\"edit-shipping-product-details-form-title\"],\nh3[data-test=\"edit-shooting-product-details-form-title\"] {\n  display: none !important;\n}",
+      "enabled": true,
+      "id": "hide-section-tittles",
+      "info": "Hides all the section titles to help declutter the page.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Section tittles"
+    },
+    {
+      "category": "tweak",
+      "css": "",
+      "enabled": true,
+      "id": "pim-click-root-icon-on-load",
+      "info": "Clicks the top left burger icon to hide the extra left menu.\nIt only works when the PIM ID product page first loads, it does not work if refreshed... yet.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Auto click burguer Icon"
+    },
+    {
+      "category": "tweak",
+      "css": "",
+      "enabled": true,
+      "id": "pim-expand-more-summary-text",
+      "info": "Clicks product summary expand buttons whose visible text is More.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Auto Expand Sum box text"
+    },
+    {
+      "category": "tweak",
+      "css": "/* Less gaps in sum box text */\n.css-wdsx3d {\n    grid-template-columns: 0.4fr 0.6fr;\n    gap: 0.2rem 0.2rem;\n}",
+      "enabled": true,
+      "id": "tweak-compact-sumbox",
+      "info": "Makes the space between text in the Sum Box more compact (less margins).",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Sum Box - Compact"
+    },
+    {
+      "category": "tweak",
+      "css": "@keyframes wtm-gns-composition-alert {\n  0%, 100% {\n    outline-color: #d32f2f;\n    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.35);\n    background-color: #fff5f5;\n  }\n\n  50% {\n    outline-color: #ff1744;\n    box-shadow: 0 0 0 5px rgba(255, 23, 68, 0.65);\n    background-color: #ffe0e0;\n  }\n}\n\nhtml:has(#product-property-item-a02917bc-59f1-4c83-b2a0-d1d1ca00f870-input:placeholder-shown):has(\n  #product-data-category-input[value=\"Shoes\"],\n  #product-data-web-category-input[value*=\"Biker Boots\"],\n  #product-data-web-category-input[value*=\"Chelsea Boots\"],\n  #product-data-web-category-input[value*=\"Flip-Flops & Slides\"],\n  #product-data-web-category-input[value*=\"Low-Tops\"],\n  #product-data-web-category-input[value*=\"Slippers\"],\n  #product-data-web-category-input[value*=\"Boat Shoes\"],\n  #product-data-web-category-input[value*=\"Derby Shoes\"],\n  #product-data-web-category-input[value*=\"Desert Boots\"],\n  #product-data-web-category-input[value*=\"Espadrilles\"],\n  #product-data-web-category-input[value*=\"Hi-Tops\"],\n  #product-data-web-category-input[value*=\"Hiking Boots\"],\n  #product-data-web-category-input[value*=\"Loafers\"],\n  #product-data-web-category-input[value*=\"Monk Shoes\"],\n  #product-data-web-category-input[value*=\"Mules\"],\n  #product-data-web-category-input[value*=\"Oxford Shoes\"],\n  #product-data-web-category-input[value*=\"Rain Boots\"],\n  #product-data-web-category-input[value*=\"Shoe Accessories\"],\n  #product-data-web-category-input[value*=\"Slip-Ons\"],\n  #product-data-web-category-input[value*=\"Ankle Boots\"],\n  #product-data-web-category-input[value*=\"Ballet Flats\"],\n  #product-data-web-category-input[value*=\"Combat Boots\"],\n  #product-data-web-category-input[value*=\"Cowboy Boots\"],\n  #product-data-web-category-input[value*=\"Derby & Oxford Shoes\"],\n  #product-data-web-category-input[value*=\"Flat Espadrilles\"],\n  #product-data-web-category-input[value*=\"Flat Mules\"],\n  #product-data-web-category-input[value*=\"Flat Pumps\"],\n  #product-data-web-category-input[value*=\"Flat Sandals\"],\n  #product-data-web-category-input[value*=\"Heeled Espadrilles\"],\n  #product-data-web-category-input[value*=\"Heeled Mules\"],\n  #product-data-web-category-input[value*=\"Heeled Pumps\"],\n  #product-data-web-category-input[value*=\"Heeled Sandals\"],\n  #product-data-web-category-input[value*=\"High-Tops\"],\n  #product-data-web-category-input[value*=\"Knee-High Boots\"],\n  #product-data-web-category-input[value*=\"Over-The-Knee Boots\"],\n  #product-data-web-category-input[value*=\"Performance Trainers\"],\n  #product-data-web-category-input[value*=\"Rain & Snow Boots\"],\n  #product-data-web-category-input[value*=\"Sandals\"],\n  #product-data-web-category-input[value*=\"Ski Footwear\"]\n)\n  #product-property-item-a02917bc-59f1-4c83-b2a0-d1d1ca00f870 .css-1j5d3ll,\nhtml:has(#product-property-item-a02917bc-59f1-4c83-b2a0-d1d1ca00f870-input[value=\"\"]):has(\n  #product-data-category-input[value=\"Shoes\"],\n  #product-data-web-category-input[value*=\"Biker Boots\"],\n  #product-data-web-category-input[value*=\"Chelsea Boots\"],\n  #product-data-web-category-input[value*=\"Flip-Flops & Slides\"],\n  #product-data-web-category-input[value*=\"Low-Tops\"],\n  #product-data-web-category-input[value*=\"Slippers\"],\n  #product-data-web-category-input[value*=\"Boat Shoes\"],\n  #product-data-web-category-input[value*=\"Derby Shoes\"],\n  #product-data-web-category-input[value*=\"Desert Boots\"],\n  #product-data-web-category-input[value*=\"Espadrilles\"],\n  #product-data-web-category-input[value*=\"Hi-Tops\"],\n  #product-data-web-category-input[value*=\"Hiking Boots\"],\n  #product-data-web-category-input[value*=\"Loafers\"],\n  #product-data-web-category-input[value*=\"Monk Shoes\"],\n  #product-data-web-category-input[value*=\"Mules\"],\n  #product-data-web-category-input[value*=\"Oxford Shoes\"],\n  #product-data-web-category-input[value*=\"Rain Boots\"],\n  #product-data-web-category-input[value*=\"Shoe Accessories\"],\n  #product-data-web-category-input[value*=\"Slip-Ons\"],\n  #product-data-web-category-input[value*=\"Ankle Boots\"],\n  #product-data-web-category-input[value*=\"Ballet Flats\"],\n  #product-data-web-category-input[value*=\"Combat Boots\"],\n  #product-data-web-category-input[value*=\"Cowboy Boots\"],\n  #product-data-web-category-input[value*=\"Derby & Oxford Shoes\"],\n  #product-data-web-category-input[value*=\"Flat Espadrilles\"],\n  #product-data-web-category-input[value*=\"Flat Mules\"],\n  #product-data-web-category-input[value*=\"Flat Pumps\"],\n  #product-data-web-category-input[value*=\"Flat Sandals\"],\n  #product-data-web-category-input[value*=\"Heeled Espadrilles\"],\n  #product-data-web-category-input[value*=\"Heeled Mules\"],\n  #product-data-web-category-input[value*=\"Heeled Pumps\"],\n  #product-data-web-category-input[value*=\"Heeled Sandals\"],\n  #product-data-web-category-input[value*=\"High-Tops\"],\n  #product-data-web-category-input[value*=\"Knee-High Boots\"],\n  #product-data-web-category-input[value*=\"Over-The-Knee Boots\"],\n  #product-data-web-category-input[value*=\"Performance Trainers\"],\n  #product-data-web-category-input[value*=\"Rain & Snow Boots\"],\n  #product-data-web-category-input[value*=\"Sandals\"],\n  #product-data-web-category-input[value*=\"Ski Footwear\"]\n)\n  #product-property-item-a02917bc-59f1-4c83-b2a0-d1d1ca00f870 .css-1j5d3ll {\n  outline: 3px solid #d32f2f !important;\n  border-radius: 6px !important;\n  animation: wtm-gns-composition-alert 1s ease-in-out infinite !important;\n}",
+      "enabled": true,
+      "id": "GNS_Shoes_warning",
+      "info": "Makes GNS-compliant composition dropdown blink red when:\n- Category is Shoes + the GNS-compliant composition input is empty.\n- Web Category has any Men/Women shoes selected + the GNS-compliant composition input is empty.\n- Not fully made to work with any kids exclusive shoe types, add those later.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "GNS Shoes warning"
+    },
+    {
+      "category": "tweak",
+      "css": "/* HS CODE DDP: highlight closed dropdown values by gender wording */\n\ninput[id^=\"edit-shipping-ddp-\"][id$=\"-input\"][value*=\"MEN'S\" i],\ninput[id^=\"edit-shipping-ddp-\"][id$=\"-input\"][value*=\"BOY'S\" i],\n#product-data-category-input[value^=\"Men \" i],\n#product-data-category-input[value^=\"Men's \" i],\n#product-data-category-input[value^=\"Mens \" i],\n#product-data-category-input[value^=\"Baby Boy \" i],\n#product-data-category-input[value^=\"Teen Boy \" i],\n#product-data-category-input[value^=\"Boys \" i] {\n  background-color: #9DC6ED !important;\n}\n\ninput[id^=\"edit-shipping-ddp-\"][id$=\"-input\"][value*=\"WOMEN'S\" i],\ninput[id^=\"edit-shipping-ddp-\"][id$=\"-input\"][value*=\"GIRL'S\" i],\n#product-data-category-input[value^=\"Women \" i],\n#product-data-category-input[value^=\"Women's \" i],\n#product-data-category-input[value^=\"Girl \" i],\n#product-data-category-input[value^=\"Girl's \" i],\n#product-data-category-input[value^=\"Girls \" i] {\n  background-color: #FFC2E4 !important;\n}\n\n/* Gender dropdown: highlight closed value */\n\n#product-data-gender-input[value=\"Men\" i],\n#product-data-gender-input[value=\"Boy\" i],\n#product-data-gender-input[value=\"Boys\" i],\n#product-data-gender-input[value=\"Baby Boy\" i],\n#product-data-gender-input[value=\"Teen Boy\" i] {\n  background-color: #9DC6ED !important;\n}\n\n#product-data-gender-input[value=\"Women\" i],\n#product-data-gender-input[value=\"Woman\" i],\n#product-data-gender-input[value=\"Girl\" i],\n#product-data-gender-input[value=\"Girls\" i],\n#product-data-gender-input[value=\"Baby Girl\" i],\n#product-data-gender-input[value=\"Teen Girl\" i] {\n  background-color: #FFC2E4 !important;\n}\n\n#product-data-gender-input[value=\"Unisex\" i] {\n  background-color: #eadfff !important;\n  color: #4b247a !important;\n}",
+      "enabled": true,
+      "id": "ddp-gender-colors",
+      "info": "Makes the DDP and Category dropdowns background colours change based on gender.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Gender Colors - DDP & Category"
+    },
+    {
+      "category": "tweak",
+      "css": "section.css-v15qdp {\n  --wtm-compact-page-pad: 0.5rem;\n  --wtm-compact-panel-pad: 0.7rem;\n  --wtm-compact-column-gap: 0.6rem;\n  --wtm-compact-section-gap: 0.55rem;\n  --wtm-compact-field-gap: 0.45rem;\n  --wtm-compact-label-gap: 0.2rem;\n\n  padding: var(--wtm-compact-page-pad) !important;\n}\n\nsection.css-v15qdp nav[aria-label=\"breadcrumb\"] {\n  margin-bottom: 0.45rem !important;\n}\n\nsection.css-v15qdp [data-test=\"page-title\"] {\n  margin: 0 0 0.5rem !important;\n}\n\nsection.css-v15qdp .css-1galelb {\n  gap: var(--wtm-compact-column-gap) !important;\n  align-items: flex-start !important;\n}\n\nsection.css-v15qdp [data-test=\"edit-products-tabs-list\"] {\n  margin-bottom: 0.25rem !important;\n}\n\nsection.css-v15qdp [data-test=\"edit-products-tabs-list\"] [role=\"tab\"] > div {\n  padding-block: 0.45rem !important;\n}\n\n/* Product summary outer padding only. Internal summary grid stays owned by Sum Box - Compact. */\nsection.css-v15qdp .css-11q7adv {\n  padding: 0.6rem 0.7rem !important;\n}\n\n/* Main edit panel. */\nsection.css-v15qdp [data-test=\"edit-products-tabs-panels\"] form > .css-1rzeait {\n  padding: var(--wtm-compact-panel-pad) !important;\n  margin-bottom: 0 !important;\n}\n\n/* Top context selectors: Site, Partners, Matched products. */\nsection.css-v15qdp .css-m4zd9k > .css-1se9rsl {\n  margin-bottom: var(--wtm-compact-field-gap) !important;\n  padding-bottom: 0 !important;\n}\n\n/* Main form sections, using stable data-test hooks instead of one generated class. */\nsection.css-v15qdp [data-test$=\"-form-section\"] {\n  margin-top: 0 !important;\n  margin-bottom: var(--wtm-compact-section-gap) !important;\n  padding-bottom: var(--wtm-compact-section-gap) !important;\n}\n\nsection.css-v15qdp [data-test$=\"-form-section\"]:last-child {\n  margin-bottom: 0 !important;\n}\n\n/* Section headings. Works whether the title is legend or h3. */\nsection.css-v15qdp [data-test$=\"-form-title\"] {\n  margin: 0 0 0.35rem !important;\n  line-height: 1.2 !important;\n}\n\n/* Normal field rows. */\nsection.css-v15qdp [data-test=\"edit-products-tabs-panels\"] .css-1se9rsl {\n  margin-bottom: var(--wtm-compact-field-gap) !important;\n  padding-bottom: 0 !important;\n}\n\nsection.css-v15qdp [data-test=\"edit-products-tabs-panels\"] .css-1se9rsl > label,\nsection.css-v15qdp .css-m4zd9k > .css-1se9rsl > label {\n  margin-bottom: var(--wtm-compact-label-gap) !important;\n  line-height: 1.15 !important;\n}\n\n/* Nested fieldsets, scoped to the edit tab so controls are not globally flattened. */\nsection.css-v15qdp [data-test=\"edit-products-tabs-panels\"] fieldset fieldset {\n  margin-top: 0.45rem !important;\n  margin-bottom: 0.45rem !important;\n  padding-bottom: 0.45rem !important;\n}\n\nsection.css-v15qdp [data-test=\"edit-products-tabs-panels\"] .css-1se9rsl > input,\nsection.css-v15qdp [data-test=\"edit-products-tabs-panels\"] .css-1se9rsl > textarea,\nsection.css-v15qdp [data-test=\"edit-products-tabs-panels\"] .css-1se9rsl > [role=\"combobox\"],\nsection.css-v15qdp .css-m4zd9k > .css-1se9rsl > [role=\"combobox\"] {\n  margin-bottom: 0 !important;\n}",
+      "enabled": true,
+      "id": "compact-v2",
+      "info": "Makes the whole PIM Page more compact.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Compact - Margins & Padding"
+    },
+    {
+      "category": "tweak",
+      "css": "/* -----------------------------\n   OPEN COLOUR DROPDOWN INDICATORS\n   Uses visible dropdown order, skipping WTM-hidden DO NOT USE rows.\n----------------------------- */\n\n:is(\n  #product-data-main-color-listbox,\n  #edit-core-product-details-form-farfetch-secondary-colour-listbox\n) ul[role=\"menu\"] > li:not([data-wtm-hidden-by]) [data-name=\"listItemRoot\"] {\n  position: relative !important;\n  padding-right: 96px !important;\n}\n\n:is(\n  #product-data-main-color-listbox,\n  #edit-core-product-details-form-farfetch-secondary-colour-listbox\n) ul[role=\"menu\"] > li:not([data-wtm-hidden-by]) [__type=\"ListItemCheck\"] {\n  position: relative !important;\n  z-index: 2 !important;\n}\n\n:is(\n  #product-data-main-color-listbox,\n  #edit-core-product-details-form-farfetch-secondary-colour-listbox\n) ul[role=\"menu\"] > li:is(\n  :nth-child(1 of :not([data-wtm-hidden-by])),\n  :nth-child(2 of :not([data-wtm-hidden-by])),\n  :nth-child(3 of :not([data-wtm-hidden-by])),\n  :nth-child(4 of :not([data-wtm-hidden-by])),\n  :nth-child(5 of :not([data-wtm-hidden-by])),\n  :nth-child(6 of :not([data-wtm-hidden-by])),\n  :nth-child(7 of :not([data-wtm-hidden-by])),\n  :nth-child(8 of :not([data-wtm-hidden-by])),\n  :nth-child(9 of :not([data-wtm-hidden-by])),\n  :nth-child(10 of :not([data-wtm-hidden-by])),\n  :nth-child(11 of :not([data-wtm-hidden-by])),\n  :nth-child(12 of :not([data-wtm-hidden-by])),\n  :nth-child(13 of :not([data-wtm-hidden-by])),\n  :nth-child(14 of :not([data-wtm-hidden-by])),\n  :nth-child(15 of :not([data-wtm-hidden-by])),\n  :nth-child(16 of :not([data-wtm-hidden-by]))\n) [data-name=\"listItemRoot\"]::after {\n  content: \"\" !important;\n  position: absolute !important;\n  top: 50% !important;\n  right: 38px !important;\n  width: 46px !important;\n  height: 18px !important;\n  transform: translateY(-50%) !important;\n  border-radius: 4px !important;\n  background: transparent !important;\n  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18) !important;\n  pointer-events: none !important;\n  z-index: 1 !important;\n}\n\n/* 1 BLACK */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(1 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #111111 !important;\n}\n\n/* 2 BLUE */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(2 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #1976d2 !important;\n}\n\n/* 3 BROWN */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(3 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #795548 !important;\n}\n\n/* 4 GOLD */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(4 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: linear-gradient(45deg, #d4af37, #fcf6ba, #d4af37) !important;\n}\n\n/* 5 GREEN */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(5 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #2e7d32 !important;\n}\n\n/* 6 GREY */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(6 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #808080 !important;\n}\n\n/* 7 METALLIC */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(7 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: linear-gradient(45deg, #777777, #f5f5f5, #9c9c9c) !important;\n}\n\n/* 8 MULTICOLOUR */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(8 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: linear-gradient(90deg, #d32f2f, #fbc02d, #2e7d32, #1976d2, #7b1fa2) !important;\n}\n\n/* 9 NEUTRALS */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(9 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: linear-gradient(90deg, #f3ead7, #c7b99a, #8d806f) !important;\n}\n\n/* 10 ORANGE */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(10 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #f57c00 !important;\n}\n\n/* 11 PINK */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(11 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #ec407a !important;\n}\n\n/* 12 PURPLE */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(12 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #7b1fa2 !important;\n}\n\n/* 13 RED */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(13 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #d32f2f !important;\n}\n\n/* 14 SILVER */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(14 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: linear-gradient(45deg, #c0c0c0, #f5f5f5, #c0c0c0) !important;\n}\n\n/* 15 WHITE */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(15 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #ffffff !important;\n  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35) !important;\n}\n\n/* 16 YELLOW */\n:is(#product-data-main-color-listbox, #edit-core-product-details-form-farfetch-secondary-colour-listbox) ul[role=\"menu\"] > li:nth-child(16 of :not([data-wtm-hidden-by])) [data-name=\"listItemRoot\"]::after {\n  background: #FFFF00 !important;\n}\n\n/* -----------------------------\n   CLOSED MAIN + SECONDARY COLOUR INDICATORS\n----------------------------- */\n\n#product-data-main-color .css-1j5d3ll,\n#edit-core-product-details-form-farfetch-secondary-colour .css-1j5d3ll {\n  position: relative !important;\n  border-left: none !important;\n  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.16) !important;\n  border-radius: 6px !important;\n  overflow: hidden !important;\n  background-color: #ffffff !important;\n}\n\n#product-data-main-color-input,\n#edit-core-product-details-form-farfetch-secondary-colour-input {\n  position: relative !important;\n  z-index: 2 !important;\n  font-weight: 700 !important;\n  background-color: transparent !important;\n}\n\n#product-data-main-color .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour .css-1j5d3ll::after {\n  content: \"\" !important;\n  position: absolute !important;\n  top: 4px !important;\n  bottom: 4px !important;\n  right: 34px !important;\n  width: 60px !important;\n  border-radius: 5px !important;\n  background: transparent !important;\n  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15) !important;\n  pointer-events: none !important;\n  z-index: 1 !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"BLACK\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"BLACK\"]) .css-1j5d3ll::after {\n  background: #111111 !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"BLUE\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"BLUE\"]) .css-1j5d3ll::after {\n  background: #1976d2 !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"BROWN\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"BROWN\"]) .css-1j5d3ll::after {\n  background: #795548 !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"GOLD\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"GOLD\"]) .css-1j5d3ll::after {\n  background: linear-gradient(45deg, #d4af37, #fcf6ba, #d4af37) !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"GREEN\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"GREEN\"]) .css-1j5d3ll::after {\n  background: #2e7d32 !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"GREY\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"GREY\"]) .css-1j5d3ll::after {\n  background: #808080 !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"METALLIC\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"METALLIC\"]) .css-1j5d3ll::after {\n  background: linear-gradient(45deg, #777777, #f5f5f5, #9c9c9c) !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"MULTICOLOUR\"]) .css-1j5d3ll::after,\n#product-data-main-color:has(#product-data-main-color-input[value=\"MULTICOLOR\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"MULTICOLOUR\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"MULTICOLOR\"]) .css-1j5d3ll::after {\n  background: linear-gradient(90deg, #d32f2f, #fbc02d, #2e7d32, #1976d2, #7b1fa2) !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"ORANGE\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"ORANGE\"]) .css-1j5d3ll::after {\n  background: #f57c00 !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"PINK\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"PINK\"]) .css-1j5d3ll::after {\n  background: #ec407a !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"PURPLE\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"PURPLE\"]) .css-1j5d3ll::after {\n  background: #7b1fa2 !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"RED\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"RED\"]) .css-1j5d3ll::after {\n  background: #d32f2f !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"SILVER\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"SILVER\"]) .css-1j5d3ll::after {\n  background: linear-gradient(45deg, #c0c0c0, #f5f5f5, #c0c0c0) !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"WHITE\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"WHITE\"]) .css-1j5d3ll::after {\n  background: #ffffff !important;\n  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35) !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"NEUTRALS\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"NEUTRALS\"]) .css-1j5d3ll::after {\n  background: linear-gradient(90deg, #f3ead7, #c7b99a, #8d806f) !important;\n}\n\n#product-data-main-color:has(#product-data-main-color-input[value=\"YELLOW\"]) .css-1j5d3ll::after,\n#edit-core-product-details-form-farfetch-secondary-colour:has(#edit-core-product-details-form-farfetch-secondary-colour-input[value=\"YELLOW\"]) .css-1j5d3ll::after {\n  background: #FFFF00 !important;\n}\n\n",
+      "enabled": true,
+      "id": "colors_dropdown_v3",
+      "info": "Adds colour blocks in the colour dropdown next to the text names.\n⚠️ \"Colors - Do Not Use\" must be enabled for this to work, or the colours will be wrong.",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Colour Dropdown"
+    }
+  ],
+  "version": 9
+}
