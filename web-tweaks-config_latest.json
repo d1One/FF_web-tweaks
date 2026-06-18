@@ -264,7 +264,18 @@
         "https://www.farfetch-apps.com/productinformationmng/edit/*"
       ],
       "name": "Messurement Grid - Improvements"
+    },
+    {
+      "category": "tweak",
+      "css": "",
+      "enabled": true,
+      "id": "pim-brand-tab-title",
+      "info": "Renames the browser tab to the Brand name - Useful to organize tabs by Brand",
+      "matches": [
+        "https://www.farfetch-apps.com/productinformationmng/edit/*"
+      ],
+      "name": "Brand as tab title"
     }
   ],
-  "version": 10
+  "version": 11
 }
